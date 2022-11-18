@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { isLoggedInVar } from "../apollo";
 import { useState } from "react";
 const Title = styled.h1`
   color: ${(props) => (props.potato ? "beige" : "violet")};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  ${(props) =>
+    props.potato
+      ? css`
+          font-size: 49px;
+        `
+      : css`
+          text-decoration: underline;
+        `}
 `;
 
 const Container = styled.div`
