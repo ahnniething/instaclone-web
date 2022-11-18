@@ -9,7 +9,7 @@
     - react helmet
     - react-fontawesome
 - [x] Router
-- [ ] Authentication
-- [ ] Architecture
+- [x] Authentication
+- [x] Architecture
 - [ ] Styles
 
