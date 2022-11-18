@@ -12,6 +12,6 @@
 - [x] Authentication
 - [x] Architecture
 - [x] Styles
+- [ ] TypeScript
 
 2. feature/login
-
