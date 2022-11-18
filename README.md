@@ -11,5 +11,7 @@
 - [x] Router
 - [x] Authentication
 - [x] Architecture
-- [ ] Styles
+- [x] Styles
+
+2. feature/login
 
