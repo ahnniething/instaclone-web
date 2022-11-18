@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,12 +10,17 @@ import Login from "./screens/Login";
 import NotFound from "./screens/NotFound";
 
 function App() {
-  const isLoggedIn = true;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <Router>
       <Switch>
         <Route path='/' exact>
-          {isLoggedIn ? <Home /> : <Login />}
+          {isLoggedIn ? (
+            <Home setIsLoggedIn={setIsLoggedIn} />
+          ) : (
+            <Login setIsLoggedIn={setIsLoggedIn} />
+          )}
         </Route>
         <Route>
           {/* <Redirect to='/'></Redirect> */}
