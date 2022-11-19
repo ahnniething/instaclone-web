@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { darkModeVar, isLoggedInVar } from "../apollo";
+import routes from "./routes";
 
 interface IContainerProps {}
 
@@ -138,7 +139,7 @@ function Login() {
         </TopBox>
         <BottomBox>
           <span>Don't have an account?</span>
-          <Link to="/sign-up">Sign up</Link>
+          <Link to={routes.signUp}>Sign up</Link>
         </BottomBox>
       </Wrapper>
     </Container>
