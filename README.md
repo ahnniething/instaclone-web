@@ -29,3 +29,10 @@
 - [x] develop form in React way 
 - [x] react helmet: <helmet> should be inside <helmetProvider>
 - [x] react-hook-form
+    - [x] register, watch, handleSubmit(onSubmitValid, onSubmitInvalid), errors
+    - [x] validation : required, validate() : async, pattern..... 
+    - [x] mode 유효성 검사를 언제 진행하는지
+        - onSubmit: Submit 버튼을 클릭할 때
+        - onChange: 실시간으로 사용자가 인풋에 무언가를 입력할 때마다
+        - onBlur: 인풋에 무언가를 입력한 뒤 외부를 클릭했을 때(인풋의 포커스 상태가 해제된 순간)
+        - onTouched: 인풋을 클릭하는 순간부터

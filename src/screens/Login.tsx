@@ -14,6 +14,7 @@ import BottomBox from "../components/auth/BottomBox";
 import { useState } from "react";
 import PageTitle from "../components/PageTitle";
 import { useForm } from "react-hook-form";
+import FormError from "../components/auth/FormError";
 
 const FacebookLogin = styled.div`
   color: #385285;
@@ -33,14 +34,15 @@ function Login() {
     watch,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<FormData>();
+  } = useForm<FormData>({
+    mode: "onBlur",
+  });
   const onSubmitValid = (data: any) => {
     // console.log("valid", data);
   };
   const onSubmitInValid = (data: any) => {
     // console.log("Invalid", data);
   };
-  console.log(errors);
   return (
     <AuthLayout>
       <PageTitle title="Login" />
@@ -66,13 +68,17 @@ function Login() {
             })}
             type="text"
             placeholder="Username"
+            hasError={Boolean(errors?.username?.message)}
           />
+          <FormError message={errors?.username?.message}></FormError>
           <Input
             {...register("password", { required: "Password is required." })}
             type="password"
             placeholder="Password"
+            hasError={Boolean(errors?.password?.message)}
           />
-          <Button type="submit" value="Log in" />
+          <FormError message={errors?.password?.message}></FormError>
+          <Button type="submit" value="Log in" disabled={!isValid} />
         </form>
         <Seperator />
         <FacebookLogin>
