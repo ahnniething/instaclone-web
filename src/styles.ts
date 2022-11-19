@@ -2,11 +2,13 @@ import { createGlobalStyle, DefaultTheme } from "styled-components";
 import reset from "styled-reset";
 
 export const lightTheme: DefaultTheme = {
-  fontColor: "#2c2c2c",
+  mainColor: "#0095f6",
+  borderColor: "rgb(219,219,219)",
   bgColor: "#FAFAFA",
 };
 export const darkTheme: DefaultTheme = {
-  fontColor: "lightgray",
+  mainColor: "#0095f6",
+  borderColor: "rgb(219,219,219)",
   bgColor: "#2c2c2c",
 };
 

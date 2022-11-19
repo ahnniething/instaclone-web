@@ -19,7 +19,7 @@ const Container = styled.div<IContainerProps>`
 
 const WhiteBox = styled.div`
   background-color: white;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid ${(props) => props.theme.borderColor};
   width: 100%;
 `;
 
@@ -46,8 +46,8 @@ const Input = styled.input`
   width: 100%;
   border-radius: 3px;
   padding: 7px;
-  background-color: "#FAFAFA";
-  border: 0.5px solid rgb(219, 219, 219);
+  background-color: ${(props) => props.theme.bgColor};
+  border: 0.5px solid ${(props) => props.theme.borderColor};
   margin-top: 5px;
   box-sizing: border-box;
   &::placeholder {
@@ -59,7 +59,7 @@ const Button = styled.input`
   border: none;
   border-radius: 3px;
   margin-top: 12px;
-  background-color: #0095f6;
+  background-color: ${(props) => props.theme.mainColor};
   color: white;
   text-align: center;
   padding: 8px 0px;
@@ -72,7 +72,7 @@ const BottomBox = styled(WhiteBox)`
   text-align: center;
   a {
     font-weight: 600;
-    color: #0095f6;
+    color: ${(props) => props.theme.mainColor};
     text-decoration: none;
   }
 `;
@@ -92,13 +92,13 @@ const Seperator = styled.div`
   div {
     width: 100%;
     height: 1px;
-    background-color: rgb(219, 219, 219);
+    background-color: ${(props) => props.theme.borderColor};
   }
   span {
     margin: 0px 10px;
     font-weight: 600;
     font-size: 12px;
-    color: #8e8e8e;
+    color: ${(props) => props.theme.borderColor};
   }
 `;
 

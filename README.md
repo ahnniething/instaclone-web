@@ -20,3 +20,4 @@
 - [x] css : pseudo-classes(:last-child), pseudo-elements(::placeholder), box-sizing, all:unset
 - [x] add web fonts in index.html
 - [x] refactoring :last-child to new component
+- [x] add several colors to the theme
