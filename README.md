@@ -14,7 +14,8 @@
 - [x] Styles
 - [x] Styled-components + TypeScript
 
-2. login
+2. auth(login/signup)
+- [x] login page
 - [x] extending styled-components 
 - [x] targeting html tag in styled-components 
 - [x] css : pseudo-classes(:last-child), pseudo-elements(::placeholder), box-sizing, all:unset
@@ -24,3 +25,7 @@
 - [x] use the <Link> tag in react-router-dom not use the <a> tag. because the anchor tag triggers refresh so all the states and react application go away. 
 - [x] utilize components
 - [x] prop-types
+- [x] signup page
+- [x] develop form in React way 
+- [x] react helmet: <helmet> should be inside <helmetProvider>
+- [x] react-hook-form

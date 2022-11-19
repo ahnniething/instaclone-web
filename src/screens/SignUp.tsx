@@ -11,6 +11,7 @@ import routes from "./routes";
 import Input from "../components/auth/Input";
 import FormBox from "../components/auth/FormBox";
 import BottomBox from "../components/auth/BottomBox";
+import PageTitle from "../components/PageTitle";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const Subtitle = styled.h3`
 function SignUp() {
   return (
     <AuthLayout>
+      <PageTitle title={"Sign Up"} />
       <FormBox>
         <HeaderContainer>
           <FontAwesomeIcon icon={faInstagram} size="3x" />

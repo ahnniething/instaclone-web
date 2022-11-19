@@ -11,6 +11,8 @@ import routes from "./routes";
 import Input from "../components/auth/Input";
 import FormBox from "../components/auth/FormBox";
 import BottomBox from "../components/auth/BottomBox";
+import { useState } from "react";
+import PageTitle from "../components/PageTitle";
 
 const FacebookLogin = styled.div`
   color: #385285;
@@ -21,16 +23,44 @@ const FacebookLogin = styled.div`
 `;
 
 function Login() {
+  const [username, setUsername] = useState("");
+  const [usernameError, setUsernameError] = useState("");
+  const onUsernameChange = (event: any) => {
+    console.log(event.target.value);
+    setUsernameError("");
+    setUsername(event.target.value);
+  };
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    console.log(username);
+    if (username === "") {
+      setUsernameError("Not empty pls.");
+    }
+    if (username.length < 10) {
+      setUsernameError("too short");
+    }
+  };
   return (
     <AuthLayout>
+      <PageTitle title="Login" />
       <FormBox>
         <div>
           <FontAwesomeIcon icon={faInstagram} size="3x" />
         </div>
-        <form>
-          <Input type="text" placeholder="Username" />
+        <form onSubmit={handleSubmit}>
+          {usernameError}
+          <Input
+            onChange={onUsernameChange}
+            value={username}
+            type="text"
+            placeholder="Username"
+          />
           <Input type="password" placeholder="Password" />
-          <Button type="submit" value="Log in" />
+          <Button
+            type="submit"
+            value="Log in"
+            disabled={username === "" && username.length < 10}
+          />
         </form>
         <Seperator />
         <FacebookLogin>
