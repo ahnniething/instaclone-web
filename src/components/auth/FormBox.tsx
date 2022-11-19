@@ -19,7 +19,12 @@ const Container = styled(BaseBox)`
     flex-direction: column;
   }
 `;
-function FormBox({ children }) {
+
+interface IFormBoxProps {
+  children: React.ReactNode;
+}
+
+function FormBox({ children }: IFormBoxProps) {
   return <Container>{children}</Container>;
 }
 export default FormBox;
