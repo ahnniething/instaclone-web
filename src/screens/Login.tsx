@@ -4,6 +4,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { darkModeVar, isLoggedInVar } from "../apollo";
 
@@ -70,9 +71,11 @@ const Button = styled.input`
 const BottomBox = styled(WhiteBox)`
   padding: 20px 0px;
   text-align: center;
+  /* <Link> 태그는 react-router-dom에서 <a> 태그로 변환하기 때문에 <Link> 스타일이 적용됨  */
   a {
     font-weight: 600;
     color: ${(props) => props.theme.mainColor};
+    margin-left: 5px;
     text-decoration: none;
   }
 `;
@@ -134,8 +137,8 @@ function Login() {
           </FacebookLogin>
         </TopBox>
         <BottomBox>
-          <span>Don't have an account? </span>
-          <a href="#">Sign up</a>
+          <span>Don't have an account?</span>
+          <Link to="/sign-up">Sign up</Link>
         </BottomBox>
       </Wrapper>
     </Container>
