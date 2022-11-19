@@ -12,6 +12,8 @@
 - [x] Authentication
 - [x] Architecture
 - [x] Styles
-- [ ] TypeScript
+- [x] Styled-components + TypeScript
 
-2. feature/login
+2. login
+- [ ] extending styled-components 
+- [ ] targeting html tag in styled-components 
