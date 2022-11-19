@@ -22,3 +22,5 @@
 - [x] refactoring :last-child to new component
 - [x] add several colors to the theme
 - [x] use the <Link> tag in react-router-dom not use the <a> tag. because the anchor tag triggers refresh so all the states and react application go away. 
+- [x] utilize components
+- [x] prop-types
