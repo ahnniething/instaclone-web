@@ -39,29 +39,32 @@ const TopBox = styled(WhiteBox)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    input {
-      width: 100%;
-      border-radius: 3px;
-      padding: 7px;
-      background-color: "#FAFAFA";
-      border: 0.5px solid rgb(219, 219, 219);
-      margin-top: 5px;
-      box-sizing: border-box;
-      &::placeholder {
-        font-size: 12px;
-      }
-      &:last-child {
-        border: none;
-        margin-top: 12px;
-        background-color: #0095f6;
-        color: white;
-        text-align: center;
-        padding: 8px 0px;
-        font-weight: 600;
-      }
-    }
   }
+`;
+
+const Input = styled.input`
+  width: 100%;
+  border-radius: 3px;
+  padding: 7px;
+  background-color: "#FAFAFA";
+  border: 0.5px solid rgb(219, 219, 219);
+  margin-top: 5px;
+  box-sizing: border-box;
+  &::placeholder {
+    font-size: 12px;
+  }
+`;
+
+const Button = styled.input`
+  border: none;
+  border-radius: 3px;
+  margin-top: 12px;
+  background-color: #0095f6;
+  color: white;
+  text-align: center;
+  padding: 8px 0px;
+  font-weight: 600;
+  width: 100%;
 `;
 
 const BottomBox = styled(WhiteBox)`
@@ -94,6 +97,7 @@ const Seperator = styled.div`
   span {
     margin: 0px 10px;
     font-weight: 600;
+    font-size: 12px;
     color: #8e8e8e;
   }
 `;
@@ -115,9 +119,9 @@ function Login() {
             <FontAwesomeIcon icon={faInstagram} size="3x" />
           </div>
           <form>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-            <input type="submit" value="Log in"></input>
+            <Input type="text" placeholder="Username" />
+            <Input type="password" placeholder="Password" />
+            <Button type="submit" value="Log in" />
           </form>
           <Seperator>
             <div></div>
@@ -130,8 +134,8 @@ function Login() {
           </FacebookLogin>
         </TopBox>
         <BottomBox>
-          <span>Don't have an account?</span>
-          <a href="#">Sign</a>
+          <span>Don't have an account? </span>
+          <a href="#">Sign up</a>
         </BottomBox>
       </Wrapper>
     </Container>

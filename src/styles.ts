@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${(props) => props.theme.bgColor};
         font-size: 14px;
         font-family:'Open Sans', sans-serif;
+        color: rgb(38,38,38)
     }
     a {
       text-decoration: none;

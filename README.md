@@ -15,5 +15,8 @@
 - [x] Styled-components + TypeScript
 
 2. login
-- [ ] extending styled-components 
-- [ ] targeting html tag in styled-components 
+- [x] extending styled-components 
+- [x] targeting html tag in styled-components 
+- [x] css : pseudo-classes(:last-child), pseudo-elements(::placeholder), box-sizing, all:unset
+- [x] add web fonts in index.html
+- [x] refactoring :last-child to new component
